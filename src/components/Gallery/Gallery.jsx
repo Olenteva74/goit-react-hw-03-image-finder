@@ -50,7 +50,6 @@ export class Gallery extends Component {
      }
      
    } else if (prevState.page !== page && page !== 1) {
-        this.setState({status: "pending"});
         try {
            const response = await fetchImg(searchQuery, page);
            this.setState(prevState => ({
