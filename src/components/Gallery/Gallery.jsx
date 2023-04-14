@@ -36,7 +36,7 @@ export class Gallery extends Component {
             this.setState({status: "rejected", error: `Sorry, there are no images ${searchQuery}. Please try again.`})
           } else {
             this.setState(prevState => ({
-                images: [...prevState.images, ...response.hits], status: "resolved"
+                images: response.hits, status: "resolved"
             })); 
             if (response.totalHits <= 12) {
                 this.setState({isLoadButton: false});

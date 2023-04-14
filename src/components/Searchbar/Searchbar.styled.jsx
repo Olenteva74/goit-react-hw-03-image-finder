@@ -66,6 +66,7 @@ export const Message = styled.div`
 position: absolute;
 top: 35%;
 left: 50%;
-color: #010101;
+background: #3f51b5;
+border-radius: 2px;
 font-size: 18px;
 `;

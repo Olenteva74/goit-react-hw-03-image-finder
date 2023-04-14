@@ -11,7 +11,7 @@ const initialValues = {
 }
 
 const schema = yup.object().shape({
-  searchQuery: yup.string().trim().required()
+  searchQuery: yup.string().trim().required("Search is a required field")
 })
 
 export class Searchbar extends Component {
