@@ -20,9 +20,8 @@ export class Searchbar extends Component {
     onSubmit: PropTypes.func.isRequired
   }
 
-    handleSubmitSearchForm = (values, {resetForm}) => {
+    handleSubmitSearchForm = (values, actions) => {
         this.props.onSubmit({...values});
-        resetForm();
       };
 
     render() {

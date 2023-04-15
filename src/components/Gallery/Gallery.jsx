@@ -35,9 +35,7 @@ export class Gallery extends Component {
         if (response.totalHits === 0) {
             this.setState({status: "rejected", error: `Sorry, there are no images ${searchQuery}. Please try again.`})
           } else {
-            this.setState(prevState => ({
-                images: response.hits, status: "resolved"
-            })); 
+            this.setState({images: response.hits, status: "resolved"}); 
             if (response.totalHits <= 12) {
                 this.setState({isLoadButton: false});
               } else {
@@ -50,6 +48,7 @@ export class Gallery extends Component {
      }
      
    } else if (prevState.page !== page && page !== 1) {
+
         try {
            const response = await fetchImg(searchQuery, page);
            this.setState(prevState => ({
